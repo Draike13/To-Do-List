@@ -7,9 +7,26 @@
     <title>Document</title>
 </head>
 <body>
+    
+    <div class="to-do-list"></div>
     <script>
 
-let list = ['stuff', 'things', 'more stuff', 'tasks']
+//declare document in a var
+const toDoList = document.querySelector('.to-do-list')
+
+//the list itself in array
+const list = ['stuff', 'things', 'more stuff', 'tasks']
+
+//save part of document to var
+const listData = document.createElement('div')
+
+//insert the text
+listData.innerText = list
+
+//insert into document
+toDoList.appendChild(listData)
+
+
 console.log(list);
 
 
