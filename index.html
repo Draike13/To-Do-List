@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+
     <div class="to-do-list"></div>
     <script>
 
@@ -16,17 +16,20 @@ const toDoList = document.querySelector('.to-do-list')
 
 //the list itself in array
 const list = ['stuff', 'things', 'more stuff', 'tasks']
+//loop to make it a column
+for(let sortedList of list){
 
 //save part of document to var
 const listData = document.createElement('div')
 
 //insert the text
-listData.innerText = list
+//adjusted to be the sortedList
+listData.innerText = sortedList
 
 //insert into document
 toDoList.appendChild(listData)
 
-
+}
 console.log(list);
 
 
