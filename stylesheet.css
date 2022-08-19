@@ -1,4 +1,22 @@
 p {
-    border: 5px solid rgb(76, 27, 141);
+    
+    border: 5px solid rgb(0, 0, 0);
     margin: 50px;
+    font-size: 30px;
+    background-color: rgb(48, 44, 44);
+    color: white;
+    border-radius: 12px;
+    
+    
+}
+h1 {
+    border: 5px solid black;
+    border-radius: 12px;
+        background-color: #484444;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 5500;
+    text-decoration: underline;
+    color:black;
+    text-shadow: 5px white;
 }
