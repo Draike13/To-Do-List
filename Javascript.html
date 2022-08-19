@@ -9,9 +9,17 @@
 </head>
 <body>
 
-    <P class="to-do-list"></P>
-    <script>
+<h1>To Do List</h1>
+<P class="to-do-list">
+    <button>Button 0</button>
+    <button>Button 1</button>
+    <button>Button 2</button>
+    <button>Button 3</button>
+</P>
 
+
+<script>
+   
 //declare document in a var
 const toDoList = document.querySelector('.to-do-list')
 
@@ -29,7 +37,6 @@ listData.innerText = sortedList
 
 //insert into document
 toDoList.appendChild(listData)
-
 }
 console.log(list);
 
