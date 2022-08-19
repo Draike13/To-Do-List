@@ -6,7 +6,7 @@ button {
     display: block;
     font-size: 16px;
     background-color: white;
-    box-shadow: 0 4px 8px 0 black, 0 4px 10px 0 black;
+    box-shadow: 0 4px 8px 0 black, 0 4px 6px 0 black;
     border-radius: 8px;
     
 
@@ -16,10 +16,10 @@ button:focus{
     border-color: rgb(30, 184, 207);
     border-width: 2px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px 0 rgb(30,184,207), 0 4px 10px 0 rgb(30,184,207);
+    box-shadow: 0 4px 8px 0 rgb(30,184,207), 0 4px 6px 0 rgb(30,184,207);
 }
 button:hover {
-    box-shadow: 0 4px 8px 0 rgb(30,184,207), 0 4px 10px 0 rgb(30,184,207);
+    box-shadow: 0 4px 8px 0 rgb(30,184,207), 0 4px 6px 0 rgb(30,184,207);
     
     
 }
