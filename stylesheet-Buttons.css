@@ -1,10 +1,19 @@
 button {
     border: 5px solid black;
-    color: blue;
-    padding:15px 32px;
+    color: black;
+    padding:5px 5px;
     text-align: center;
     display: block;
     font-size: 16px;
     background-color: white;
+    
+
+}
+button:hover {
+    text-decoration-line: line-through;
+    text-decoration-color: crimson;
+    box-shadow: 0 8px 10px 0 black, 0 6px 10px 0 black;
+    
+
 
 }
