@@ -1,19 +1,30 @@
 button {
-    border: 5px solid black;
+    border: 2px solid black;
     color: black;
     padding:5px 5px;
     text-align: center;
     display: block;
     font-size: 16px;
     background-color: white;
+    box-shadow: 0 4px 8px 0 black, 0 4px 10px 0 black;
+    border-radius: 8px;
     
 
 }
+button:focus{
+
+    border-color: rgb(30, 184, 207);
+    border-width: 2px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgb(30,184,207), 0 4px 10px 0 rgb(30,184,207);
+}
 button:hover {
+    box-shadow: 0 4px 8px 0 rgb(30,184,207), 0 4px 10px 0 rgb(30,184,207);
+    
+    
+}
+
+button:active {
     text-decoration-line: line-through;
     text-decoration-color: crimson;
-    box-shadow: 0 8px 10px 0 black, 0 6px 10px 0 black;
-    
-
-
 }
