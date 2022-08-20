@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do-List</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="stylesheet-Buttons.css">
-</head>
-<body>
 
-<h1>To Do List</h1>
-<P class="to-do-list">
-    
-    <button>Button 0</button>
-    <button>Button 1</button>
-    <button>Button 2</button>
-    <button>Button 3</button>
-</P>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="stylesheet-Buttons.css" />
+  </head>
+  <body>
+    <h1>To Do List</h1>
+    <div class="to-do-list">
+      <div>
+        <button>Button 0</button>
+        <button>Button 1</button>
+        <button>Button 2</button>
+        <button>Button 3</button>
+      </div>
+      <div class="to-do-list-items">
+      </div>
+    </div>
 
+    <script>
+      //declare document in a var
+      const toDoList = document.querySelector(".to-do-list-items");
 
-<script>
+      //the list itself in array
+      const list = [
+        "Learn CSS",
+        "Pretend to code good",
+        "Make pretty buttons",
+        "Profit",
+      ];
+      //loop to make it a column
+      for (let item of list) {
+        //creating part of document <p></p>
+        const listData = document.createElement("p");
 
-//declare document in a var
-const toDoList = document.querySelector('.to-do-list')
+        // insert the text into the created element
+        listData.innerText = item;
 
-//the list itself in array
-const list = ['Learn CSS', 'Pretend to code good', 'Make pretty buttons', 'Profit']
-//loop to make it a column
-for(let sortedList of list){
-
-//save part of document to var
-const listData = document.createElement('P')
-
-//insert the text
-//adjusted to be the sortedList
-listData.innerText = sortedList
-
-//insert into document
-toDoList.appendChild(listData)
-}
-console.log(list);
-
-
+        //insert the element into the document
+        toDoList.appendChild(listData);
+      }
+      console.log(list);
     </script>
-</body>
+  </body>
 </html>
