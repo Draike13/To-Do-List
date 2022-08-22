@@ -4,6 +4,7 @@
     border: 5px solid black;
     border-radius: 12px;
     max-width: 50vw;
+    background-color: #484444;
     
     }
 
@@ -28,6 +29,7 @@ div {
 
 label {
     font-size: xx-large;
+    color: white;
    
 
 }

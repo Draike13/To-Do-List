@@ -1,21 +1,15 @@
 button {
     border: 2px solid black;
     color: black;
-    padding:2px 2px;
+    padding: 0px 2px;
     text-align: center;
     font-size: 12px;
     font-weight: 5500;
     background-color: crimson;
     box-shadow: 0 4px 8px 0 black, 0 4px 6px 0 black;
     border-radius: 4px;   
-    margin-left: auto;
     float:right;
-
-}
-
-.button {
-
-align:right;
+    margin: 3px;
 
 }
 
