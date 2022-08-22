@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="stylesheet-Buttons.css" />
+</head>
+<body>
+   
+    <fieldset class="the-field">
+    <legend class="title">To Do list:
+    </legend>
+    </fieldset>
+        
+    <script>
+    const toDoField = document.querySelector(".the-field")
+
+    let toDoList = ['learn CSS','pretend to code good','make pretty buttons','profit']
+        for(let item of toDoList){
+            let list = document.createElement("div")
+            let label = document.createElement("label")
+            let input = document.createElement("input")
+            let button = document.createElement("button")
+
+            input.type = "checkbox"
+            button.type = "button"
+            label.innerText = item
+            button.innerText = 'Remove'
+
+            toDoField.appendChild(list)
+                list.appendChild(input)
+                list.appendChild(label)
+                list.appendChild(button)    
+}
+
+    </script>
+</body>
+</html>
