@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To-Do-List</title>
-
-    <link rel="stylesheet" href="stylesheet.css" />
-    <link rel="stylesheet" href="stylesheet-Buttons.css" />
-  </head>
-  <body>
-    <h1>To Do List</h1>
-    <div class="to-do-list">
-      <div>
-        <button>Button 0</button>
-        <button>Button 1</button>
-        <button>Button 2</button>
-        <button>Button 3</button>
-      </div>
-      <div class="to-do-list-items">
-      </div>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="stylesheet.css" />
+  <link rel="stylesheet" href="stylesheet-Buttons.css" />
+</head>
+<body>
+  <fieldset class="the-field">
+      <legend class="title">To Do list:</legend>
+    </fieldset>
 
     <script>
-      //declare document in a var
-      const toDoList = document.querySelector(".to-do-list-items");
+      //grabbing the fieldset element and storing in a variable
+      const toDoField = document.querySelector(".the-field");
 
-      //the list itself in array
-      const list = [
-        "Learn CSS",
-        "Pretend to code good",
-        "Make pretty buttons",
-        "Profit",
-      ];
-      //loop to make it a column
-      for (let item of list) {
-        //creating part of document <p></p>
-        const listData = document.createElement("p");
+const toDoList = [
+        {list: "learn CSS", priority: 2},
+        {list: "pretend to code good", priority: 3},
+        {list: "make pretty buttons", priority: 3},
+        {list: "profit", priority: 1},
+        {list: "pretend to know what we're doing", priority: 1}
+      ]; //array of object with 2 key/value pairs; list/priority
 
-        // insert the text into the created element
-        listData.innerText = item;
+      toDoList.forEach((item, index)=>{
+        let list = document.createElement("div"); //creating a div to store items in
+        let label = document.createElement("label"); //creating a label to put on something
+        let input = document.createElement("input"); //creating an input element to hold the checkbox
+        let button = document.createElement("button"); //creating an element to hold the button
 
-        //insert the element into the document
-        toDoList.appendChild(listData);
-      }
-      console.log(list);
-    </script>
-  </body>
+        input.type = "checkbox"; //change the input variable type to checkbox
+        button.type = "button";//change the button variable type to button
+        label.innerText = item.list; //insert the text from the array into the label variable
+        button.innerText = "X"; //insert text onto the button
+
+        toDoField.appendChild(list); //adding the list variable to the fieldset
+        list.appendChild(input); //adding the checkbox to the "list" div
+        list.appendChild(label); //adding the text(label) to the div
+        list.appendChild(button); //adding the button to the div
+
+
+        if (index <= 1) {
+         input.checked = true;
+        }
+
+      })
+
+  </script>
+</body>
 </html>
