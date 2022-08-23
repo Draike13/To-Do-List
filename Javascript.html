@@ -53,14 +53,14 @@ const toDoList = [
          input.checked = true;
         }
       
+        
+        button.addEventListener('click', function handleClick(event) {
+          console.log(event.target.parentNode);
+          
+          event.target.parentNode.remove();
+        }); //functioning button removal
+        
       })
-
-      document.addEventListener('click', function handleClick(event) {
-        console.log(event.target);
-
-      event.target.remove();
-    }); //gets rid of everything when clicked. not good
-
 
   </script>
 </body>
