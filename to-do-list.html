@@ -19,13 +19,13 @@
       const toDoField = document.querySelector(".the-field");
 
       let toDoList = [
-        {list: "learn CSS"},
-        {list: "pretend to code good"},
-        {list: "make pretty buttons"},
-        {list: "profit"},
-        {list: "pretend to know what we're doing"},
-      ]; //creating the array
-      
+        {"list": "learn CSS"},
+        {"list": "pretend to code good"},
+        {"list": "make pretty buttons"},
+        {"list": "profit"},
+        {"list": "pretend to know what we're doing"}
+      ]; //creating the array of objects
+      toDoList.forEach("list");
       for (let item of toDoList) {
         //creating a simple 'for of' loop
         let list = document.createElement("div"); //creating a div to store items in

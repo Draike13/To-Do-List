@@ -43,3 +43,13 @@ input:hover {
 cursor: pointer;
 
 }
+
+.p-1 {
+    color: crimson;
+}
+.p-2 {
+    color: orange;
+}
+.p-3 {
+    color: forestgreen;
+}
