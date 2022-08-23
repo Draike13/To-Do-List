@@ -35,7 +35,14 @@ const toDoList = [
         button.type = "button";//change the button variable type to button
         label.innerText = item.list; //insert the text from the array into the label variable
         button.innerText = "X"; //insert text onto the button
-
+        if (item.priority == 1){
+          label.classList.add("p-1");
+        } else if (item.priority == 2){
+          label.classList.add("p-2");
+        } else if (item.priority == 3){
+          label.classList.add("p-3");
+        }
+        
         toDoField.appendChild(list); //adding the list variable to the fieldset
         list.appendChild(input); //adding the checkbox to the "list" div
         list.appendChild(label); //adding the text(label) to the div
@@ -45,7 +52,7 @@ const toDoList = [
         if (index <= 1) {
          input.checked = true;
         }
-
+        label.classname = "p-1";
       })
 
   </script>
