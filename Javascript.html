@@ -55,11 +55,12 @@ const toDoList = [
         label.classname = "p-1";
       })
 
-      //  const button = document.getElementById('box');
+      document.addEventListener('click', function handleClick(event) {
+        console.log(event.target);
 
-     // button.addEventListener('click', function handleClick(event) {
-   // button.remove();
-//}); This is the command to onclick remove box. unsure if correct box
+      event.target.remove();
+    }); //gets rid of everything when clicked. not good
+
 
   </script>
 </body>
