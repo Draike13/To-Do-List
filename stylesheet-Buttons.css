@@ -43,24 +43,24 @@ plusButton {
     box-shadow: 0 4px 8px 0 black, 0 4px 6px 0 black;
     border-radius: 4px;  
     margin: 3px;
-    float: right;
+    float: left;
     transition: all .5s;
 }
 
 plusButton:focus{
 
     border-color: rgb(30, 184, 207);
-    border-width: 2px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px 0 rgb(30,184,207), 0 4px 6px 0 rgb(30,184,207);
-}
-plusButton:hover {
-    box-shadow: 0 4px 8px 0 rgb(30,184,207), 0 4px 6px 0 rgb(30,184,207);
+    border-width: 2px;ow: 0 4px 8px 0 rgb(30,184,207), 0 4px 6px 0 rgb(30,184,207);
     cursor: pointer;
     
 }
 
 plusButton:active {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgb(30,184,207), 0 4px 6px 0 rgb(30,184,207);
+}
+plusButton:hover {
+    box-shad
     text-decoration-line: line-through;
     text-decoration-color: green;
 }
