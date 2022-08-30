@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="stylesheet-Buttons.css" />
 </head>
 <body>
+  <p class="addTask"></p>
   <fieldset class="the-field">
       <legend class="title">To Do list:</legend>
     </fieldset>
@@ -17,7 +18,7 @@
       //grabbing the fieldset element and storing in a variable
       const toDoField = document.querySelector(".the-field");
 
-const toDoList = [
+let toDoList = [
         {list: "learn CSS", priority: 2},
         {list: "pretend to code good", priority: 3},
         {list: "make pretty buttons", priority: 3},
@@ -65,6 +66,17 @@ const toDoList = [
     plusButton.type = "button";
     plusButton.innerText = "Add Task";
     toDoField.appendChild(plusButton);
+
+    plusButton.addEventListener('click', function myFunction() {      
+  let text;
+  let person = prompt("Please enter your task:", "Read Harry Potter");
+  if (person == null || person == "") {
+    text = "No new task added.";
+  } else {
+    text = {list: person};
+  }
+  toDoList.push({text});
+})
 
   </script>
 </body>
