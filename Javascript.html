@@ -86,10 +86,11 @@
     let priorityCheck = prompt("Pick a priority, 1-3:", 3);
     if (priorityCheck == null || priorityCheck == "") {
       text = alert("No Priority Set.");
-    } else {
+    } else if (priorityCheck == 1 || priorityCheck == 2 || priorityCheck == 3){
       text = {list: person, priority: priorityCheck};
       toDoList.push(text);
-    }}
+    } else {text = alert("Prioity out of range.")}
+  }
   listFunction();
 })
   </script>
