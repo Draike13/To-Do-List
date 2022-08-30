@@ -43,7 +43,7 @@ plusButton {
     box-shadow: 0 4px 8px 0 black, 0 4px 6px 0 black;
     border-radius: 4px;  
     margin: 3px;
-    float: left;
+    /*float: left;*/
     transition: all .5s;
 }
 

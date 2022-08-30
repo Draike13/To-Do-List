@@ -12,13 +12,15 @@
   <p class="addTask"></p>
   <fieldset class="the-field">
       <legend class="title">To Do list:</legend>
+      <main class="listHolder"></main>
     </fieldset>
 
     <script>
       //grabbing the fieldset element and storing in a variable
       const toDoField = document.querySelector(".the-field");
-
-let toDoList = [
+      const listHolder = document.querySelector(".listHolder");
+      
+      const toDoList = [
         {list: "learn CSS", priority: 2},
         {list: "pretend to code good", priority: 3},
         {list: "make pretty buttons", priority: 3},
@@ -26,12 +28,16 @@ let toDoList = [
         {list: "get jobs", priority: 1}
       ]; //array of object with 2 key/value pairs; list/priority
 
+      
+      listFunction = function newFunction() {
+      listHolder.innerHTML = "";
       toDoList.forEach((item, index)=>{
         let list = document.createElement("div"); //creating a div to store items in
         let label = document.createElement("label"); //creating a label to put on something
         let input = document.createElement("input"); //creating an input element to hold the checkbox
         let button = document.createElement("button"); //creating an element to hold the button
 
+        list.dataset.index = index;
         input.type = "checkbox"; //change the input variable type to checkbox
         button.type = "button";//change the button variable type to button
         label.innerText = item.list; //insert the text from the array into the label variable
@@ -44,7 +50,7 @@ let toDoList = [
           label.classList.add("p-3");
         }
         
-        toDoField.appendChild(list); //adding the list variable to the fieldset
+        listHolder.appendChild(list); //adding the list variable to the big container div
         list.appendChild(input); //adding the checkbox to the "list" div
         list.appendChild(label); //adding the text(label) to the div
         list.appendChild(button); //adding the button to the div
@@ -56,12 +62,16 @@ let toDoList = [
       
         
         button.addEventListener('click', function handleClick(event) {
-          console.log(event.target.parentNode);
-          
-          event.target.parentNode.remove();
-        }); //functioning button removal
+          let i = event.target.parentNode.dataset.index;
+          toDoList.splice(i, 1);
+          console.log(i);
+          listFunction();
+        }); //functioning list removal with click of remove button
         
       })
+    }
+    listFunction();
+    
     let plusButton = document.createElement("plusButton");
     plusButton.type = "button";
     plusButton.innerText = "Add Task";
@@ -73,11 +83,11 @@ let toDoList = [
   if (person == null || person == "") {
     text = "No new task added.";
   } else {
-    text = {list: person};
+    text = {list: person, priority: 3};
+    toDoList.push(text);
   }
-  toDoList.push({text});
+  listFunction();
 })
-
   </script>
 </body>
 </html>
