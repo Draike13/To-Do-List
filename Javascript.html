@@ -64,7 +64,6 @@
         button.addEventListener('click', function handleClick(event) {
           let i = event.target.parentNode.dataset.index;
           toDoList.splice(i, 1);
-          console.log(i);
           listFunction();
         }); //functioning list removal with click of remove button
         
