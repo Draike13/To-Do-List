@@ -5,12 +5,22 @@ button {
     text-align: center;
     font-size: 12px;
     font-weight: 5500;
-    background-color: crimson;
+    animation: color-change 2s infinite;
     box-shadow: 0 4px 8px 0 black, 0 4px 6px 0 black;
     border-radius: 4px;  
     margin: 3px;
     float: right;
     transition: all .5s;
+    background-color: black;
+}
+
+@keyframes color-change {
+    0%{color: red;}
+    25%{color: blue;}
+    50%{color: green;}
+    75%{color: purple;}
+    90%{color:aliceblue;}
+    100%{color: red;}
 }
 
 button:focus{
