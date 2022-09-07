@@ -5,8 +5,8 @@ button {
     text-align: center;
     font-size: 12px;
     font-weight: 5500;
-    animation: color-change 2s infinite;
-    box-shadow: 0 4px 8px 0 black, 0 4px 6px 0 black;
+    animation: color-change 8s ease infinite;
+    box-shadow: 0 4px 8px black;
     border-radius: 4px;  
     margin: 3px;
     float: right;
@@ -23,54 +23,31 @@ button {
     100%{color: red;}
 }
 
-button:focus{
-
-    border-color: rgb(30, 184, 207);
-    border-width: 2px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px 0 rgb(30,184,207), 0 4px 6px 0 rgb(30,184,207);
-}
 button:hover {
-    box-shadow: 0 4px 8px 0 rgb(30,184,207), 0 4px 6px 0 rgb(30,184,207);
+    box-shadow: 0 4px 8px;
+    animation: color-change 8s ease infinite;
     cursor: pointer;
     
 }
 
-button:active {
-    text-decoration-line: line-through;
-    text-decoration-color: crimson;
-}
-
-
 plusButton {
     border: 2px solid black;
-    color: black;
+    color: white;
     padding: 0px 2px;
     text-align: center;
     font-size: 12px;
     font-weight: 5500;
-    background-color: green;
-    box-shadow: 0 4px 8px 0 black, 0 4px 6px 0 black;
+    background-color: black;
+    box-shadow: 0 4px 8px 0 black;
     border-radius: 4px;  
     margin: 3px;
     /*float: left;*/
     transition: all .5s;
 }
 
-plusButton:focus{
-
-    border-color: rgb(30, 184, 207);
-    border-width: 2px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px 0 rgb(30,184,207), 0 4px 6px 0 rgb(30,184,207);
-}
 plusButton:hover {
-    box-shadow: 0 4px 8px 0 rgb(30,184,207), 0 4px 6px 0 rgb(30,184,207);
+    box-shadow: 0 4px 8px;
+    animation: color-change 8s ease infinite;
     cursor: pointer;
-    
-}
 
-plusButton:active {
-    text-decoration-line: line-through;
-    text-decoration-color: crimson;
 }

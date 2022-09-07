@@ -5,21 +5,31 @@
     border-radius: 12px;
     max-width: 50vw;
     background-color: #484444;
-    filter: drop-shadow(0 6mm 10mm rgb(28, 0, 210));
+    box-shadow: 0 6mm 10mm;
+    animation: color-change 8s ease infinite;
     
     }
 
-.title {
+    .title {
     border: 5px solid black;
     border-radius: 12px;
     background-color: #484444;
     text-align: center;
     font-size: 50px;
     font-weight: 5500;
-    color:white;
+    animation: color-change 8s ease infinite;
     text-shadow: 5px white;
     max-width: 40vw;
     justify-content: center;
+}
+
+@keyframes color-change {
+    0%{color: red;}
+    25%{color: blue;}
+    50%{color: green;}
+    75%{color: purple;}
+    90%{color:aliceblue;}
+    100%{color: red;}
 }
 
 div {
@@ -38,6 +48,12 @@ label {
 input {
     height: 20px;
     width: 20px;
+}
+
+input[type='checkbox']::before {
+
+    content: "";
+    background-color: violet;
 }
 
 input:hover {
