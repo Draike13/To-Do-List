@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <fieldset class="the-field">
+    <legend class="title">To Do list:</legend>
+    <main class="listHolder"></main>
+  </fieldset>
+
+    <script>
+const toDoField = document.querySelector('.the-field');
+let toDoHolder = document.createElement('div')
+
+toDoField.appendChild(toDoHolder)
+
+
+class toDo {
+  container = document.createElement('div');
+  removeButton = document.createElement('button')
+  checkbox = document.createElement('input')
+  text = document.createElement('label')
+  priority;
+
+  constructor() {
+    this.initToDo()
+  }
+  
+  initToDo(){
+    this.removeButton.setAttribute('type', 'button')
+    this.checkbox.setAttribute('type', 'checkbox')
+    this.container.classList.add('holder')
+  }
+  
+  buildToDo(text, priority){
+    this.text.innerText = text;
+    this.text.classList.add(`p-${priority}`);
+    this.container.appendChild(this.checkbox)
+    this.container.appendChild(this.text);
+    this.container.appendChild(this.removeButton);
+  }
+
+  addToDo(holderElement){
+    holderElement.appendChild(this.container);
+  }
+
+}
+
+
+   let plusButton = document.createElement("plusButton");
+    plusButton.type = "button";
+    plusButton.innerText = "Add Task";
+    toDoHolder.appendChild(plusButton);
+   
+
+    plusButton.addEventListener('click', function() {      
+  let text;
+  let person = prompt("Please enter your task:", "Read Harry Potter");
+  if (person == null || person == "") {
+    text = alert("No new task added.");
+  } else {
+    let priorityCheck = prompt("Pick a priority, 1-3:", 3);
+    if (priorityCheck == null || priorityCheck == "") {
+      text = alert("No Priority Set.");
+    } else if (priorityCheck == 1 || priorityCheck == 2 || priorityCheck == 3){
+
+      let newToDo = new toDo();
+      newToDo.buildToDo(person, priorityCheck)
+      newToDo.addToDo(toDoField)
+      
+    } else {text = alert("Prioity out of range.")}
+}
+    })
+    </script>
+</body>
+</html>
